@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import Checkbox from './Table'
+
+const data =[
+  {
+    name: 'Bob',
+    age: '29',
+    salary: '120K'
+  }
+
+]
+
+const headers=[
+  {
+    label: 'Name',
+    id:'name'
+  },
+  {
+    label: 'Age',
+    id: 'age'
+  },
+  {
+    label: 'Salary',
+    id:'salary'
+  }
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Table data={data} headers={headers}/>
     </div>
   );
 }
