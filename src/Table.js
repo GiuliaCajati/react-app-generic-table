@@ -1,8 +1,13 @@
 import reactDom from "react-dom";
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 const Table = (props) =>{
     const { data, headers, onRowSelect } = props
+    const [color, setColor] = useState('')
+
+    useEffect(() => {
+        sectColor(randomcolor())
+    }, [0])
     return(
         <div>
             <table>
@@ -41,6 +46,7 @@ const Table = (props) =>{
                     }
                 </tbody>
             </table>
+            <button onClick={()=>{}}>Hello Welcome to the JS Study Guide</button>
         </div>
     )
 

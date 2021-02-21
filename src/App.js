@@ -6,15 +6,54 @@ import Table from './Table'
 
 const data =[
   {
-    vocab: 'Promise',
-    info: 'object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.',
-    JS: 'ES6 .then(), .cath(), .finally()'
+    vocab: 'Javasctript',
+    info: '',
+    JS: 'ES5',
+    pros:'',
+    cons:''
   },
   {
-    vocab: 'Node',
+    vocab: 'Use strict',
+    info: 'prevetns from creating random variables',
+    JS: '',
+    pros:'',
+    cons:''
+  },
+  {
+    vocab: 'IFI',
+    info: '',
+    JS: '',
+    pros:'',
+    cons:''
+  },
+  {
+    vocab: 'Promise',
+    info: 'object represents the eventual completion (or failure) of an asynchronous operation and its resulting value....asynch async await',
+    JS: 'ES6 .then(), .cath(), .finally()',
+  },
+  {
+    vocab: 'Callback',
+    info: '',
+    JS: 'ES5',
+  },
+  {
+    vocab: 'Hoisting',
     info: '29',
-    JS: '120K'
+    JS: '120K',
+  },
+  {
+    vocab: 'Node.js',
+    info: '29',
+    JS: '120K',
+    pros:'hello',
+    cons:'hello'
+  },{
+    vocab: 'async',
+  },{
+    vocab: 'sync',
   }
+
+  
 ]
 
 const headers=[
@@ -27,6 +66,18 @@ const headers=[
     id: 'info'//match id to data 
   },
   {
+    label: 'Pros',
+    id:'pros',
+  },
+  {
+    label: 'Cons',
+    id:'cons'
+  },
+  {
+    label: 'JS',
+    id:'JS',
+  },
+  {
     label:'Select',
     id:'select',
     component: Checkbox,
@@ -36,12 +87,9 @@ const headers=[
     id:'dropdown',
     component: Dropdown,
   },
-  {
-    label: 'JS',
-    id:'JS',
-  }
-] 
 
+] 
+//dot vs braket(dinamic) notation 
 const App = () => {
   const onRowSelect = () => {}
   return (
