@@ -1,17 +1,19 @@
 import reactDom from "react-dom";
 import React, {useState, useEffect} from 'react'
-import {getRandoColor} from './randomColorGenerator'
+import {getRandomColor} from './randomColorGenerator'
 
 const Table = (props) =>{
     const { data, headers, onRowSelect } = props
-    const [color, setColor] = useState('')
+    const [color, setColor] = useState({
+        color:getRandomColor() 
+    })
 
     useEffect(() => {
-        sectColor(randomcolor())
-    }, [0])
+        setColor(getRandomColor())
+    }, [1])
     return(
-        <div>
-            <table style={{backgroundColor: this.state.childrenColor}}>
+        <div >
+            <table style={{backgroundColor: color }} >
                 <thead>
                     <tr>{
                         headers.map((h)=>{

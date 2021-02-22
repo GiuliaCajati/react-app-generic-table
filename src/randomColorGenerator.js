@@ -9,7 +9,7 @@ export function getRandomColor() {
   }
   
   
-  export const newFunction = () => {
+  export const randomcolor = () => {
     let newColor = getRandomColor()
     return(newColor)
   }
