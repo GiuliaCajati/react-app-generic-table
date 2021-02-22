@@ -49,7 +49,7 @@ const Table = (props) =>{
                     }
                 </tbody>
             </table>
-            <button onClick={()=>{}}>Hello Welcome to the JS Study Guide</button>
+            <button onClick={()=>{setColor(getRandomColor())}}>Hello Welcome to the JS Study Guide</button>
         </div>
     )
 
