@@ -1,5 +1,6 @@
 import reactDom from "react-dom";
 import React, {useState, useEffect} from 'react'
+import {getRandoColor} from './randomColorGenerator'
 
 const Table = (props) =>{
     const { data, headers, onRowSelect } = props
@@ -10,7 +11,7 @@ const Table = (props) =>{
     }, [0])
     return(
         <div>
-            <table>
+            <table style={{backgroundColor: this.state.childrenColor}}>
                 <thead>
                     <tr>{
                         headers.map((h)=>{
