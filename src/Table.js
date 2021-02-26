@@ -4,15 +4,22 @@ import {getRandomColor} from './randomColorGenerator'
 
 const Table = (props) =>{
     const { data, headers, onRowSelect } = props
+    const [count, setCount] = useState(1)
     const [color, setColor] = useState({
         color:getRandomColor() 
     })
 
     useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCount(num => num+1)
+        }, 
+        1000)
         setColor(getRandomColor())
-    }, [1])
+        return () => clearInterval(intervalId)
+    }, [])
     return(
         <div >
+            <h1>{count}</h1>
             <table style={{backgroundColor: color }} >
                 <thead>
                     <tr>{
@@ -55,3 +62,21 @@ const Table = (props) =>{
 
 }
 export default Table
+
+const transpose = (matrix) => {
+    let answer = []
+    for(let i = 0; i< matrix[0].length; i++){
+        let row = []
+        for(let j = 0; j < matrix.length; j++){
+            row.push(matrix[j][i])
+        }
+        answer.push(row)
+    }
+    return answer
+}
+
+
+
+
+
+
