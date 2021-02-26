@@ -1,8 +1,8 @@
 import React from 'react'
 import './App.css';
-import Checkbox from './Checkbox'
-import Dropdown from './Dropdown'
-import Table from './Table'
+import Checkbox from './components/Checkbox'
+import Dropdown from './components/Dropdown'
+import Table from './containers/Table'
 
 const data =[
   {

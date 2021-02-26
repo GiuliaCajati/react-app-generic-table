@@ -1,6 +1,6 @@
 import reactDom from "react-dom";
 import React, {useState, useEffect} from 'react'
-import {getRandomColor} from './randomColorGenerator'
+import {getRandomColor} from '../components/randomColorGenerator'
 
 const Table = (props) =>{
     const { data, headers, onRowSelect } = props
