@@ -3,6 +3,7 @@ import './App.css';
 import Checkbox from './components/Checkbox'
 import Dropdown from './components/Dropdown'
 import Table from './containers/Table'
+import Paper from './components/paper'
 
 const data =[
   {
@@ -90,11 +91,13 @@ const headers=[
 
 ] 
 //dot vs braket(dinamic) notation 
+//add Paper element 
 const App = () => {
   const onRowSelect = () => {}
   return (
     <div className="App">
     <Table data={data} headers={headers} onRowSelect={onRowSelect}/>
+    <Paper/>
     </div>
   );
 }
