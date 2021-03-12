@@ -1,9 +1,6 @@
 import React from 'react'
 
 const Wow = () =>{
-    const funFunction = () => {
-
-    }
 // Given a directory of directories and other files, return an array of arrays which contains file paths of files with similar content.
 const fs = require("fs")
 const { promisify } = require('util')
@@ -67,7 +64,7 @@ findDuplicatePath([ 'test/root'])
 
 return(
     <div>
-       <butto OnClick = {funFunction()}/>
+     
     </div>
 )
 }
