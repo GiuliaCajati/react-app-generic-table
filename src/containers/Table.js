@@ -25,7 +25,7 @@ const Table = (props) =>{
                     <tr>{
                         headers.map((h)=>{
                             // h is {label: 'Name', id: 'name'}
-                            return(<td key={h.label}>{h.label}
+                            return(<td key={h.id}>{h.label}
                             
                             </td>)
                         })

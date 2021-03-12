@@ -20,7 +20,7 @@ const returnFirstWord = async (fileName) => {
 }
 
 const  findDuplicatePath = async (filePaths) => {
-  //let filePathMap = {} 
+  let filePathMap = {} 
   
   // 2. Call helper function 
   const _findDuplicatePath = async (singlePath) => {
@@ -46,7 +46,7 @@ const  findDuplicatePath = async (filePaths) => {
     await fs.readdir(singlePath, async (err, directoryChildren) => {
       // 4. Iterating each child of the directory 
       for (let child of directoryChildren) {
-        relativePath = singlePath + "/" + child
+        let relativePath = singlePath + "/" + child
         await _findDuplicatePath(relativePath)
       }
     }) 
