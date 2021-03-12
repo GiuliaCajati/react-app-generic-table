@@ -34,13 +34,13 @@ const  findDuplicatePath = async (filePaths) => {
       console.log(">>> Path " + singlePath + " is a File")
       let firstWord = await returnFirstWord(singlePath)
       console.log(">>> First Word " + firstWord )
-      // if (filePathMap[firstWord] === undefined) {
-      //   filePathMap[firstWord] = [singlePath]
-      // } else {
-      //   filePathMap[firstWord].push(singlePath)
-      // }
-      // console.log(">>> filePathMap")
-      // console.log(filePathMap)
+      if (filePathMap[firstWord] === undefined) {
+        filePathMap[firstWord] = [singlePath]
+      } else {
+        filePathMap[firstWord].push(singlePath)
+      }
+      console.log(">>> filePathMap")
+      console.log(filePathMap)
       return 0
       //return firstWord
     }
@@ -60,7 +60,7 @@ const  findDuplicatePath = async (filePaths) => {
     await _findDuplicatePath(paths) 
   }
 
-  //return [...Object.values(filePathMap).filter(path => path.length > 1)]
+  return [...Object.values(filePathMap).filter(path => path.length > 1)]
 }
 
 findDuplicatePath([ 'test/root'])
