@@ -3,7 +3,7 @@ import './App.css';
 import Checkbox from './components/Checkbox'
 import Dropdown from './components/Dropdown'
 import Table from './containers/Table'
-import Paper from './components/paper'
+import Wow from './components/wow'
 
 const data =[
   {
@@ -95,9 +95,9 @@ const headers=[
 const App = () => {
   const onRowSelect = () => {}
   return (
-    <div className="App">
+    <div className="App" >
     <Table data={data} headers={headers} onRowSelect={onRowSelect}/>
-    <Paper/>
+    <Wow/>
     </div>
   );
 }
